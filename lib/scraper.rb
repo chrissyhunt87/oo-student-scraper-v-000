@@ -25,7 +25,7 @@ class Scraper
     social_links = doc.css(".social-icon-container").css("a")
       social_links.each do |a|
         link = a.attr("href")
-        if link.includes?("twitter")
+        if link.include?("twitter")
           student[:twitter] = link
         elsif link.includes?("linkedin")
           student[:linkedin] = link
