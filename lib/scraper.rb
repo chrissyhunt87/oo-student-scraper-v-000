@@ -19,7 +19,7 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
-    doc = student_page = Nokogiri::HTML(open("#{profile_url}"))
+    doc = Nokogiri::HTML(open("#{profile_url}"))
     student = {}
     # Social media, blog, etc.
     social_links = doc.css(".social-icon-container").css("a")
