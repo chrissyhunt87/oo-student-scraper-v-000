@@ -27,7 +27,7 @@ class Scraper
         link = a.attr("href")
         if link.include?("twitter")
           student[:twitter] = link
-        elsif link.includes?("linkedin")
+        elsif link.include?("linkedin")
           student[:linkedin] = link
         elsif link.includes?("github")
           student[:github] = link
