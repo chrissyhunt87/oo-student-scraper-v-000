@@ -36,8 +36,9 @@ class Scraper
         end
       end
     # Other bio info
-    
-    
+    student[:bio] = doc.css(".description-holder").css("p").text
+    student[:profile_quote] = doc.css(".profile-quote").text
+
 
 
     # twitter = student_profile.css(".social-icon-container").css("a").first.attr("href")
