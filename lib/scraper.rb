@@ -3,9 +3,10 @@ require 'nokogiri'
 require 'pry'
 
 class Scraper
+  attr_accessor :name, :location, :profile_url
 
   def self.scrape_index_page(index_url)
-    doc = Nokogiri::HTML(open("#{index_url}")).css(".roster-cards-container")
+    doc = Nokogiri::HTML(open("#{index_url}"))
     binding.pry
   end
 
